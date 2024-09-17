@@ -1,9 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faDollarSign, faLink } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons/faXTwitter';
 
 const GinnanWebsite: React.FC = () => {
   const aboutRef = React.useRef<HTMLElement>(null);
@@ -55,6 +56,12 @@ const GinnanWebsite: React.FC = () => {
           </div>
           <div className="flex space-x-2">
             <Button className="p-2">
+              <a href="https://tg.me/ginnanthecat/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTelegram} className="h-4 w-4" />
+                <span className="sr-only">Telegram</span>
+              </a>
+            </Button>
+            <Button className="p-2">
               <a href="https://www.instagram.com/ginnanthecat/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" />
                 <span className="sr-only">Instagram</span>
@@ -62,13 +69,13 @@ const GinnanWebsite: React.FC = () => {
             </Button>
             <Button className="p-2">
               <a href="https://x.com/Ginnanthecat" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} className="h-4 w-4" />
+                <FontAwesomeIcon icon={faXTwitter} className="h-4 w-4" />
                 <span className="sr-only">Twitter</span>
               </a>
             </Button>
             <Button className="p-2">
               <a href="https://dexscreener.com/solana/GinNabffZL4fUj9Vactxha74GDAW8kDPGaHqMtMzps2f" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLink} className="h-4 w-4" />
+                <FontAwesomeIcon icon={faDollarSign} className="h-4 w-4" />
                 <span className="sr-only">Dexscreener</span>
               </a>
             </Button>
