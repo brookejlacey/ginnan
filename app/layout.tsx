@@ -1,18 +1,20 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Ginnan - The Cat Meme Revolution',
   description: 'Join the feline sensation taking the crypto world by storm!',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -53,5 +55,5 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
